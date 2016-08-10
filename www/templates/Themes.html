@@ -1,0 +1,46 @@
+<ion-view view-title="Themes">
+  <ion-content>
+    <!--<ion-list>
+      <ion-item ng-repeat="Theme in Themes" href="#/app/Themes/{{Theme.id}}">
+        <i class="icon ion-ios-arrow-forward"></i> {{Theme.title}}
+      </ion-item>
+    </ion-list> -->
+
+<ion-list>
+         <ion-item ng-repeat="Theme in Themes" class="item item-text-wrap" >
+           
+            <div ng-class="isItemShown(Theme) ? 'item-expand active' : 'item-expand inactive'" >
+              <h2 ng-click="toggleItem(Theme)" class="item-expand-footer">{{ Theme.title }}</h2>
+              <p >{{ Theme.text }}</p>
+              
+                <!--<a style="font-weight:300;" class="button button-balanced button-small icon-left ion-eye ic-selected" 
+                data-componentid="button1" href="#/app/Themes/{{Theme.id}}">Lire</a>-->
+                
+             
+            </div>
+           
+        </ion-item>
+
+      </ion-list>
+
+    <!--<ion-list>
+         <ion-item ng-repeat="Theme in Themes" class="item item-text-wrap" >
+           
+            <div ng-class="isItemShown(Theme) ? 'item-expand active' : 'item-expand inactive'" >
+              <h2>{{ Theme.title }}</h2>
+              <p >{{ Theme.text }}</p>
+              <div class="right" >
+                <a id="theme1-button1" style="font-weight:300;" class="button button-balanced button-small icon-left ion-eye ic-selected" data-componentid="button1">Lire</a>
+              </div>
+            </div>
+           
+          <div ng-click="toggleItem(Theme)" class="item-expand-footer" >
+            <i ng-class="isItemShown(Theme) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
+            {{ isItemShown(Theme) ? 'Moins' : 'Plus' }}  
+          </div>
+          
+        </ion-item>
+
+      </ion-list>-->
+  </ion-content>
+</ion-view>
